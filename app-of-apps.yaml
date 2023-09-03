@@ -6,12 +6,16 @@ spec:
   destination:
     name: in-cluster
     namespace: argocd
+    server: ''
   source:
     path: apps
-    repoURL: https://github.com/prashant0085/Argocd-app-of-apps.git
+    repoURL: 'https://github.com/prashant0085/Argocd-app-of-apps.git'
     targetRevision: HEAD
+  sources: []
   project: default
-  #syncPolicy:
-  #  automated:
-  #    prune: false
-  #    selfHeal: false
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    #automated:
+    #  prune: false
+    #  selfHeal: false
