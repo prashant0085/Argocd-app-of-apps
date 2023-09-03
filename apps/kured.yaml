@@ -14,8 +14,6 @@ spec:
     repoURL: 'https://kubereboot.github.io/charts'
     targetRevision: 5.2.0
     chart: kured
-  sources: []
-  project: default
   syncPolicy:
     automated:
       prune: false
