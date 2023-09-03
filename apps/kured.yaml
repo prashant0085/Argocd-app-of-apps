@@ -5,16 +5,15 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  destination:
-    name: ''
-    namespace: ''
-    server: 'https://kubernetes.default.svc'
+  project: default
   source:
-    path: ''
     repoURL: 'https://kubereboot.github.io/charts'
     targetRevision: 5.2.0
     chart: kured
-  project: default
+  destination:
+    name: in-cluster
+    namespace: 'kured'
+    server: 'https://kubernetes.default.svc'
   syncPolicy:
     automated:
       prune: false
