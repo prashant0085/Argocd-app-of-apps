@@ -2,15 +2,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kured
+  namespace: argocd
 spec:
+  destination:
+    name: in-cluster
+    namespace: argocd
   project: default
   source:
     repoURL: 'https://kubereboot.github.io/charts'
     targetRevision: 5.2.0
     chart: kured
-  destination:
-    name: in-cluster
-    namespace: kured
   syncPolicy:
     automated:
       prune: false
