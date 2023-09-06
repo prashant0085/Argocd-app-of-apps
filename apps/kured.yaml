@@ -10,7 +10,7 @@ spec:
     chart: kured
   destination:
     name: in-cluster
-    server: 'https://kubernetes.default.svc'
+    namespace: kured
   syncPolicy:
     automated:
       prune: false
