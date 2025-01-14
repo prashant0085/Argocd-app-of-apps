@@ -11,9 +11,9 @@ spec:
     repoURL: 'https://github.com/prashant0085/Argocd-app-of-apps.git'
     targetRevision: HEAD
   project: default
-  #syncPolicy:
-  #  syncOptions:
-  #    - CreateNamespace=true
-  #  automated:
-  #    prune: false
-  #    selfHeal: false
+  syncPolicy:
+   syncOptions:
+     - CreateNamespace=true
+   automated:
+     prune: false
+     selfHeal: false
