@@ -5,7 +5,7 @@ metadata:
 spec:
   destination:
     name: in-cluster
-    namespace: argocd
+    namespace: app-demo
   source:
     path: apps
     repoURL: 'https://github.com/prashant0085/Argocd-app-of-apps.git'
